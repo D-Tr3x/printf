@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	int len;
+	/*	int len;*/
 
-	len = _printf("A simple statement or sentence\n");
+	/* len = _printf("A simple statement or sentence\n"); */
 	_printf("Character: [%c]\n", 'H');
 	printf("Character: [%c]\n", 'H');
 
