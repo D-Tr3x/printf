@@ -11,11 +11,11 @@ int main(void)
 	int len;
 
 	len = _printf("A simple statement or sentence\n");
-	_printf("Character: [%c]", 'H');
-	printf("Character: [%c]", 'H');
+	_printf("Character: [%c]\n", 'H');
+	printf("Character: [%c]\n", 'H');
 
-	_printf("Another string: [%s]", "I am a string !");
-	printf("Another string: [%s]", "I am a string !");
+	_printf("Another string: [%s]\n", "I am a string !");
+	printf("Another string: [%s]\n", "I am a string !");
 
 	_printf("Percent: [%%]\n");
 	printf("Percent: [%%]\n");
