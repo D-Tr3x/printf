@@ -34,6 +34,10 @@ int _printf(const char *format, ...)
 				count += print_string(args);
 			else if (*p == '%')
 				count += print_percent(args);
+			else if (*p == 'd')
+				count += print_digit;
+			else if (*p == 'i')
+				count += print_int;
 			else /* For error statements */
 			{
 				count += _putchar('%');
