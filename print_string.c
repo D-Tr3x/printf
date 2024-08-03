@@ -23,5 +23,5 @@ int print_string(va_list args)
 		str++;
 	}
 
-	return(count);
+	return (count);
 }
