@@ -1,9 +1,0 @@
-#include "main.h"
-
-/**
- *
- */
-int print_digit(va_list args)
-{
-	
-}

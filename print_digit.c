@@ -26,7 +26,6 @@ int print_digit(va_list args)
 		count++;
 		num /= 10;
 	}
-	
-	
+		
 	return (count);
 }
