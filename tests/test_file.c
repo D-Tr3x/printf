@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 #include <stdio.h>
 
 /**
@@ -9,33 +10,18 @@
 
 int main(void)
 {
-	int len1, len2;
+	unsigned int ui;
 
-	len1 = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-	len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-
-	_printf("Character: [%c]\n", 'H');
-	printf("Character: [%c]\n", 'H');
-
-	_printf("Another string: [%s]\n", "I am a string !");
-	printf("Another string: [%s]\n", "I am a string !");
-
-	_printf("Percent: [%%]\n");
-	printf("Percent: [%%]\n");
-
-	printf("Length returned by _printf: %d\n", len1);
-	printf("Length returned by printf: %d\n", len2);
-
-	_printf("%d\n", 1024);
-	printf("%d\n", 1024);
-
-	_printf("%d\n", -2048);
-	printf("%d\n", -2048);
-
-	_printf("%d\n", 0);
-	printf("%d\n", 0);
-
+	ui = (unsigned int)INT_MAX + 1024;
+	 
+	_printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
 	
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+	
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 
 	return (0);
 }

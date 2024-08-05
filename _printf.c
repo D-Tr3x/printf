@@ -36,6 +36,14 @@ int _printf(const char *format, ...)
 				count += print_digit(args);
 			else if (*p == 'b')
 				count += print_binary(args);
+			else if (*p == 'u')
+				count += print_unsigned_decimal(args);
+			else if (*p == 'o')
+				count += print_octal(args);
+			else if (*p == 'x')
+				count += print_hex(args);
+			else if (*p == 'X')
+				count += print_HEX(args);
 			else /* For error statements */
 			{
 				count += _putchar('%');

@@ -1,4 +1,6 @@
 #include "main.h"
+
+
 /**
  * print_binary_recur - prints each binary recursively
  * @n: the unsigned integer to print
@@ -16,7 +18,6 @@ int print_binary_recur(unsigned int n)
 
 	return (count);
 }
-
 
 /**
  * print_binary - convert an unsigned int argument to binary,
