@@ -8,14 +8,14 @@
  */
 int print_digit_recur(unsigned int n)
 {
-    int count = 0;
+	int count = 0;
 
-    if (n / 10)
-        count += print_digit_recur(n / 10);
+	if (n / 10)
+		count += print_digit_recur(n / 10);
 
-    count += _putchar((n % 10) + '0');
+	count += _putchar((n % 10) + '0');
 
-    return (count);
+	return (count);
 }
 
 
@@ -30,7 +30,7 @@ int print_digit(va_list args)
 	int count = 0;
 	int num;
 	unsigned int decimal;
-	
+
 	num = va_arg(args, int);
 
 	if (num == 0)
@@ -44,6 +44,6 @@ int print_digit(va_list args)
 		decimal = num;
 
 	count += print_digit_recur(decimal);
-		
+
 	return (count);
 }
