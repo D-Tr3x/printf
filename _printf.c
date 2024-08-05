@@ -11,9 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-	const char *p;
-
-	p = format;
+	const char *p = format;
 
 	if (p == NULL)
 		return (-1);
@@ -35,9 +33,9 @@ int _printf(const char *format, ...)
 			else if (*p == '%')
 				count += print_percent(args);
 			else if (*p == 'd' || *p == 'i')
-			{
 				count += print_digit(args);
-			}
+			else if (*p == 'b')
+				count += print_binary(args);
 			else /* For error statements */
 			{
 				count += _putchar('%');
