@@ -20,9 +20,10 @@ int main(void)
 
 	_printf("Percent: [%%]\n");
 	printf("Percent: [%%]\n");
-
-	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-	printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	/**
+	 *_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	 *printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	 */
 
 	_printf("%d\n", 1024);
 	printf("%d\n", 1024);

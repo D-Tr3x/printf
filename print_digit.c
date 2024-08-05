@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * print_digit_recur - prints each digit recursively
+ * @n: unsigned integer to print
+ *
+ * Return: number of characters to print
+ */
+int print_digit_recur(unsigned int n)
+{
+    int count = 0;
+
+    if (n / 10)
+        count += print_digit_recur(n / 10);
+
+    count += _putchar((n % 10) + '0');
+
+    return (count);
+}
+
+
+/**
  * print_digit - prints a digit or decimal
  * @args: argument list
  *
@@ -9,23 +28,22 @@
 int print_digit(va_list args)
 {
 	int count = 0;
-	int num, decimal;
-	num = va_arg(args);
+	int num;
+	unsigned int decimal;
+	
+	num = va_arg(args, int);
 
 	if (num == 0)
 		return (_putchar('0'));
 	if (num < 0)
 	{
-		count = _putchar('-');
-		num = -num;
+		count += _putchar('-');
+		decimal = -num;
 	}
-	while (num > 0)
-	{
-		decimal = num % 10;
-		_putchar(decimal + '0');
-		count++;
-		num /= 10;
-	}
+	else
+		decimal = num;
+
+	count += print_digit_recur(decimal);
 		
 	return (count);
 }
