@@ -9,9 +9,11 @@
 
 int main(void)
 {
-	/*	int len;*/
+	int len1, len2;
 
-	/* len = _printf("A simple statement or sentence\n"); */
+	len1 = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+
 	_printf("Character: [%c]\n", 'H');
 	printf("Character: [%c]\n", 'H');
 
@@ -20,10 +22,9 @@ int main(void)
 
 	_printf("Percent: [%%]\n");
 	printf("Percent: [%%]\n");
-	/**
-	 *_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-	 *printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-	 */
+
+	printf("Length returned by _printf: %d\n", len1);
+	printf("Length returned by printf: %d\n", len2);
 
 	_printf("%d\n", 1024);
 	printf("%d\n", 1024);
